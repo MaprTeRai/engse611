@@ -1,0 +1,60 @@
+/* เปลี่ยนพื้นหลังของทั้งหน้าเว็บ */
+body {
+    background-color: #cff5ff; /* ใช้สีฟ้าคลาสสิก */
+    font-family: 'Arial', sans-serif; /* กำหนดฟอนต์สำหรับทั้งหน้า */
+    color: #949494; /* กำหนดสีข้อความ */
+    margin: 0;
+    padding: 0;
+}
+
+/* เปลี่ยนสีของหัวข้อ h1 */
+h1 {
+    color: #656565; /* เปลี่ยนสีของหัวข้อเป็นสีน้ำเงิน */
+    text-align: center; /* จัดข้อความกลาง */
+    font-size: 3em; /* ขนาดตัวอักษรใหญ่ */
+    background-color: rgb(255, 255, 255);
+}
+
+/* เปลี่ยนสีของข้อความที่อยู่ใน <strong> */
+strong {
+    color: #00b7ff; /* เปลี่ยนสีของข้อความที่อยู่ใน <strong> เป็นสีส้ม */
+}
+
+/* เปลี่ยนลักษณะฟอนต์ของรายการใน <ul> */
+ul , ol {
+    font-family: 'Georgia', serif; /* เปลี่ยนฟอนต์เป็น Georgia */
+    font-size: 1.1em; /* ขยายขนาดตัวอักษร */
+    color: #858585; /* เปลี่ยนสีของข้อความ */
+}
+
+/* เปลี่ยนลักษณะของลิงก์ <a> */
+a {
+    color: #0095ff; /* เปลี่ยนสีลิงก์เป็นสีส้ม */
+    text-decoration: none; /* เอาเส้นใต้ที่ลิงก์ออก */
+}
+
+a:hover {
+    text-decoration: underline; /* เมื่อ hover ให้แสดงเส้นใต้ */
+}
+
+/* เปลี่ยนลักษณะของภาพ */
+img {
+    border-radius: 8px; /* ทำให้ขอบภาพมน */
+    margin-top: 20px;
+    display: inline;
+    margin-left: 1px;
+    margin-bottom: 50px;
+}
+
+/* เปลี่ยนสีพื้นหลังของ <p> */
+p {
+    background-color: #cff5ff; /* พื้นหลังเป็นสีขาว */
+    padding: 5px;
+    border-radius: 5px; /* ขอบมน */ 
+    display: table-cell;
+}
+
+/* เพิ่มระยะห่างระหว่างบรรทัดใน <p> */
+p {
+    line-height: 1;
+}

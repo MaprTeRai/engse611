@@ -1,0 +1,83 @@
+/* เปลี่ยนพื้นหลังของทั้งหน้าเว็บ */
+body {
+    background-color: #ffffff; /* สีฟ้าคลาสสิก */
+    font-family: 'Arial', sans-serif; /* ฟอนต์ทั้งหน้า */
+    color: #494949; /* สีข้อความ */
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* สไตล์ส่วนหัว */
+  .header {
+    background-color: rgb(245, 172, 15); /* สีพื้นหลังส่วนหัว */
+    color: white; /* สีตัวอักษร */
+    text-align: center; /* จัดข้อความให้อยู่กึ่งกลาง */
+    padding: 20px;
+  }
+  
+  .header h1 {
+    color: white; /* เปลี่ยนสีข้อความส่วนหัว */
+    font-size: 3em; /* ขนาดตัวอักษร */
+    margin: 0;
+  }
+  
+  /* เปลี่ยนสีข้อความใน <strong> */
+  strong {
+    color: #00b7ff; /* สีข้อความเน้น */
+  }
+  
+  /* ลักษณะของรายการ <ul>, <ol> */
+  ul, ol {
+    font-family: 'Georgia', serif; /* ใช้ฟอนต์ Georgia */
+    font-size: 1.1em; /* ขยายขนาดตัวอักษร */
+    color: #858585; /* สีข้อความ */
+    margin-bottom: 15px;
+  }
+  
+  /* สไตล์ของลิงก์ */
+  a {
+    color: #0095ff; /* สีของลิงก์ */
+    text-decoration: none; /* เอาเส้นใต้ของลิงก์ออก */
+  }
+  
+  a:hover {
+    text-decoration: underline; /* เมื่อ hover เพิ่มเส้นใต้ */
+  }
+  
+  /* สไตล์สำหรับส่วนต่าง ๆ */
+  .section {
+    margin-bottom: 20px;
+    padding: 20px;
+    border-radius: 8px; /* ขอบมน */
+    background-color: rgb(255, 242, 204); /* พื้นหลังสีเหลืองอ่อน */
+  }
+  
+  /* สไตล์สำหรับอารมณ์ */
+  .section.moods {
+    background-color: rgb(213, 232, 212); /* พื้นหลังสีเขียวอ่อน */
+  }
+  
+
+  .section.fun-facts {
+    background-color: rgb(213, 232, 212);
+  }
+  
+  /* ลักษณะของ <p> */
+  p {
+    line-height: 1.5;
+    margin: 10px 0;
+  }
+  
+  img {
+    border-radius: 8px;
+    margin: 10px;
+    display: inline-block;
+    width: auto;
+    max-width: 25%;
+  }
+  
+  /* ส่วนการตรวจสอบ Validation */
+  .validation {
+    text-align: center;
+    margin-top: 20px;
+  }  

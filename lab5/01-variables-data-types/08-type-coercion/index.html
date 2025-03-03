@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Type Coercion</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            text-align: center;
+            padding: 50px;
+        }
+        .container {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            display: inline-block;
+        }
+        h1 {
+            color: #333;
+        }
+        pre {
+            background: #eee;
+            padding: 10px;
+            border-radius: 5px;
+            text-align: left;
+            white-space: pre-wrap;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>JavaScript Type Coercion Demo</h1>
+        <p>Check the developer console (F12 > Console) to see results.</p>
+        <h2>Type Coercion Results:</h2>
+        <pre id="typeCoercionResults"></pre>
+    </div>
+    <script>
+        let output = "";
+        function log(value) {
+            console.log(value);
+            output += value + "\n";
+        }
+
+        // Example 1: String + Number
+        log("5" + 2);
+        log(5 + "2");
+
+        // Example 2: String - Number
+        log("5" - 2);
+        log("10" * 2);
+        log("8" / "2");
+
+        // Example 3: Boolean + Number
+        log(true + 1);
+        log(false + 1);
+        log(true + true);
+
+        // Example 4: null & undefined
+        log(null + 5);
+        log(undefined + 5);
+
+        // Example 5: Type Coercion in Comparison
+        log("5" == 5);
+        log("5" === 5);
+
+        // Example 6: Object vs Primitive
+        log([1, 2] + [3, 4]);
+        log([] + {});
+        log({} + []);
+
+        // Example 7: Unary + Operator
+        log(+"42");
+        log(+true);
+        log(+false);
+        log(+null);
+        log(+undefined);
+
+        document.getElementById("typeCoercionResults").textContent = output;
+    </script>
+</body>
+</html>

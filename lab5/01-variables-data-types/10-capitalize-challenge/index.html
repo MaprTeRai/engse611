@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript String Operations</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            text-align: center;
+            padding: 50px;
+        }
+        .container {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            display: inline-block;
+        }
+        h1 {
+            color: #333;
+        }
+        pre {
+            background: #eee;
+            padding: 10px;
+            border-radius: 5px;
+            text-align: left;
+            white-space: pre-wrap;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>JavaScript String Operations Demo</h1>
+        <p>Check the developer console (F12 > Console) to see results.</p>
+        <h2>String Operations Results:</h2>
+        <pre id="stringResults"></pre>
+    </div>
+    <script>
+        let output = "";
+        function log(value) {
+            console.log(value);
+            output += value + "\n";
+        }
+
+        // String Declaration
+        let str1 = "Hello";
+        let str2 = 'World';
+        let str3 = `JavaScript`;
+
+        // String Concatenation
+        let message = str1 + " " + str2;
+        let template = `${str1}, ${str2}!`;
+        log(message);
+        log(template);
+
+        // Accessing Characters
+        log(str1[0]);
+        log(str2.charAt(1));
+
+        // String Length
+        log(str3.length);
+
+        // Changing Case
+        log(str3.toUpperCase());
+        log(str3.toLowerCase());
+
+        // Trimming Whitespace
+        let str4 = "  trim me  ";
+        log(str4.trim());
+
+        // Replacing Text
+        log(str3.replace("Java", "Type"));
+
+        // Splitting Strings
+        log("apple,banana,grape".split(","));
+
+        // Checking String Content
+        log(str3.includes("Java"));
+        log(str3.startsWith("Java"));
+        log(str3.endsWith("Script"));
+
+        // Capitalizing First Letter
+        const myString = 'developer';
+        log(myString.charAt(0).toUpperCase() + myString.substring(1));
+        log(myString[0].toUpperCase() + myString.substring(1));
+        log(myString[0].toUpperCase() + myString.slice(1));
+        log(`${myString[0].toUpperCase()}${myString.slice(1)}`);
+        log(myString.replace(/^./, (char) => char.toUpperCase()));
+
+        document.getElementById("stringResults").textContent = output;
+    </script>
+</body>
+</html>

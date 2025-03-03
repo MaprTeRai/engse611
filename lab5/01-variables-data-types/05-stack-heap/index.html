@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Variables</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            text-align: center;
+            padding: 50px;
+        }
+        .container {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            display: inline-block;
+        }
+        h1 {
+            color: #333;
+        }
+        pre {
+            background: #eee;
+            padding: 10px;
+            border-radius: 5px;
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>JavaScript Object Modification</h1>
+        <p>Check the developer console (F12 > Console) to see variable changes.</p>
+        <h2>Person Object:</h2>
+        <pre id="personDisplay"></pre>
+    </div>
+    <script>
+        let personObj = {
+            name: "James",
+            age: 23,
+            isMale: true,
+        };
+        console.log(personObj);
+        
+        function updateDisplay() {
+            document.getElementById("personDisplay").textContent = JSON.stringify(personObj, null, 2);
+        }
+        
+        updateDisplay();
+
+        let newPerson = personObj;
+        newPerson.isMale = false;
+        console.log(personObj);
+        
+        updateDisplay();
+    </script>
+</body>
+</html>

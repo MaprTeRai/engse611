@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Variables</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            text-align: center;
+            padding: 50px;
+        }
+        .container {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            display: inline-block;
+        }
+        h1 {
+            color: #333;
+        }
+        pre {
+            background: #eee;
+            padding: 10px;
+            border-radius: 5px;
+            text-align: left;
+            white-space: pre-wrap;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>JavaScript Type Conversion</h1>
+        <p>Check the developer console (F12 > Console) to see variable changes.</p>
+        <h2>Type Conversion Results:</h2>
+        <pre id="conversionResults"></pre>
+    </div>
+    <script>
+        let output = "";
+        function log(value) {
+            console.log(value);
+            output += value + "\n";
+        }
+
+        let amount = '108';
+        log(`${amount} (type: ${typeof amount})`);
+
+        // Convert string to number
+        amount = Number(amount);
+        log(`${amount} (type: ${typeof amount})`);
+        log('------------');
+
+        log(parseInt("34"));
+        log(parseInt("-56"));
+        log(parseInt("3.14"));
+        log(parseInt("6.022e23"));
+        log(parseInt("hello1"));
+        log('------------');
+
+        log(Number("34"));
+        log(Number("-56"));
+        log(Number("3.14"));
+        log(Number("6.022e23"));
+        log(Number("6hello1"));
+        log('------------');
+
+        amount = 1024.67;
+        log(`${amount} (type: ${typeof amount})`);
+
+        // Convert number to string
+        amount = amount.toString();
+        log(`${amount} (type: ${typeof amount})`);
+        amount = parseInt(amount);
+        log(`${amount} (type: ${typeof amount})`);
+        amount = String(amount);
+        log(`${amount} (type: ${typeof amount})`);
+
+        amount = 1024.38;
+        // Convert string to decimal
+        amount = parseFloat(amount);
+        log(`${amount} (type: ${typeof amount})`);
+        log('------------');
+
+        document.getElementById("conversionResults").textContent = output;
+    </script>
+</body>
+</html>

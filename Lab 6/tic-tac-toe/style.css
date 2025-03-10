@@ -1,0 +1,73 @@
+:root {
+  --grid-size: 450px;
+  --margin-size: 12px;
+  --square-size: calc((var(--grid-size) / 3) - var(--margin-size));
+  --x-color: #FF6347; /* Tomato color */
+  --o-color: #4682B4; /* Steel Blue */
+  --background-color: #2F4F4F; /* Dark Slate Gray */
+  --highlight-color: rgba(255, 99, 71, 0.5); /* Semi-transparent Tomato */
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f0f8ff; /* Alice Blue background */
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+#grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  gap: var(--margin-size);
+  width: var(--grid-size);
+  height: var(--grid-size);
+  background-color: var(--background-color);
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+#grid div {
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+#grid div:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+#grid div img {
+  width: 80%;
+  transition: transform 0.2s ease;
+}
+
+#grid div.x img {
+  border: 4px solid var(--x-color);
+  transform: rotate(360deg);
+}
+
+#grid div.o img {
+  border: 4px solid var(--o-color);
+  transform: rotate(-360deg);
+}
+
+#grid div.x:hover img, #grid div.o:hover img {
+  transform: scale(1.2);
+}
+
+#results {
+  font-size: 20px;
+  margin-top: 20px;
+  font-weight: bold;
+  color: #333;
+  text-align: center;
+}

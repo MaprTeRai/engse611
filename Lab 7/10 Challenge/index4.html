@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adding Dynamic Elements</title>
+    <script src="script4.js" defer></script>
+</head>
+<body>
+    <div id="container">
+        <p>Welcome to the page!</p>
+    </div>
+    <button id="addItemButton">Insert Item</button>
+</body>
+</html>
+
+<script>
+    let button = document.getElementById("addItemButton");
+
+    button.addEventListener("click", function() {
+        let newDiv = document.createElement("div");
+        newDiv.textContent = "A new item has been added.";
+        newDiv.style.backgroundColor = "lightgreen";
+        newDiv.style.padding = "10px";
+
+        let container = document.getElementById("container");
+        container.appendChild(newDiv);
+    });
+</script>

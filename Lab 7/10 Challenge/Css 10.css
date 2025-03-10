@@ -1,0 +1,14 @@
+#square {
+    width: 100px;
+    height: 100px;
+    background-color: green;
+    position: relative;
+    transition: all 1s ease-in-out;
+}
+
+#square.animate {
+    width: 150px;
+    height: 150px;
+    background-color: purple;
+    top: 200px;
+}
